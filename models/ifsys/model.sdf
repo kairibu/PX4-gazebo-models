@@ -213,13 +213,13 @@
         </inertia>
         <pose>0 0 0 0 -0 0</pose>
       </inertial>
-      <pose>0.6 0 0.12 3.14159 1.55678 3.14159</pose>
+      <pose>0.6 0 0.12 0 4.71238898 0</pose>
       <gravity>1</gravity>
       <self_collide>0</self_collide>
       <kinematic>0</kinematic>
       <enable_wind>0</enable_wind>
       <visual name='visual'>
-        <pose>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 0 0</pose>
         <geometry>
           <cylinder>
             <radius>0.05</radius>
@@ -731,7 +731,7 @@
     <joint name='propeller_joint' type='revolute'>
       <parent>base_link</parent>
       <child>propeller</child>
-      <pose>0 0 0 0 -0 0</pose>
+      <pose>0 0 0 0 0 0</pose>
       <axis>
         <xyz>0 0 1</xyz>
         <limit>
@@ -856,11 +856,11 @@
     <plugin filename="gz-sim-multicopter-motor-model-system" name="gz::sim::systems::MulticopterMotorModel">
             <jointName>propeller_joint</jointName>
             <linkName>propeller</linkName>
-            <turningDirection>ccw</turningDirection>
+            <turningDirection>cw</turningDirection>
             <timeConstantUp>0.0125</timeConstantUp>
             <timeConstantDown>0.025</timeConstantDown>
-            <maxRotVelocity>2000</maxRotVelocity>
-            <motorConstant>0.01</motorConstant>
+            <maxRotVelocity>1000</maxRotVelocity>
+            <motorConstant>1.2e-05</motorConstant>
             <momentConstant>0.016</momentConstant>
             <commandSubTopic>command/motor_speed</commandSubTopic>
             <motorNumber>0</motorNumber>
