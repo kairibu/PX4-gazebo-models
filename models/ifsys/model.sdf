@@ -3,7 +3,8 @@
   <model name='ifsys'>
     <link name='base_link'>
       <inertial>
-        <mass>1</mass>
+        <mass>1.5</mass>
+        <pose>0.35 0 0.1 0 0 0</pose>
         <inertia>
           <ixx>0.166667</ixx>
           <ixy>0</ixy>
@@ -12,9 +13,8 @@
           <iyz>0</iyz>
           <izz>0.166667</izz>
         </inertia>
-        <pose>0 0 0 0 -0 0</pose>
       </inertial>
-      <pose>0 0 0 0 -0 0</pose>
+      <pose>0 0 0 0 0 0</pose>
       <gravity>1</gravity>
       <self_collide>0</self_collide>
       <kinematic>0</kinematic>
@@ -47,7 +47,7 @@
       <collision name='collision'>
         <laser_retro>0</laser_retro>
         <max_contacts>10</max_contacts>
-        <pose>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
             <uri>./meshes/alexis.dae</uri>
@@ -202,7 +202,7 @@
     </link>
     <link name='propeller'>
       <inertial>
-        <mass>1</mass>
+        <mass>0.01</mass>
         <inertia>
           <ixx>0.145833</ixx>
           <ixy>0</ixy>
@@ -302,7 +302,7 @@
     </link>
     <link name='right_aileron'>
       <inertial>
-        <mass>1</mass>
+        <mass>0.01</mass>
         <inertia>
           <ixx>0.166667</ixx>
           <ixy>0</ixy>
@@ -393,7 +393,7 @@
     </link>
     <link name='left_aileron'>
       <inertial>
-        <mass>1</mass>
+        <mass>0.01</mass>
         <inertia>
           <ixx>0.166667</ixx>
           <ixy>0</ixy>
@@ -484,7 +484,7 @@
     </link>
     <link name='left_a-tail'>
       <inertial>
-        <mass>1</mass>
+        <mass>0.01</mass>
         <inertia>
           <ixx>0.166667</ixx>
           <ixy>0</ixy>
@@ -575,7 +575,7 @@
     </link>
     <link name='right_a-tail'>
       <inertial>
-        <mass>1</mass>
+        <mass>0.01</mass>
         <inertia>
           <ixx>0.166667</ixx>
           <ixy>0</ixy>
@@ -856,11 +856,11 @@
     <plugin filename="gz-sim-multicopter-motor-model-system" name="gz::sim::systems::MulticopterMotorModel">
             <jointName>propeller_joint</jointName>
             <linkName>propeller</linkName>
-            <turningDirection>cw</turningDirection>
+            <turningDirection>ccw</turningDirection>
             <timeConstantUp>0.0125</timeConstantUp>
             <timeConstantDown>0.025</timeConstantDown>
-            <maxRotVelocity>1000</maxRotVelocity>
-            <motorConstant>1.2e-05</motorConstant>
+            <maxRotVelocity>2000</maxRotVelocity>
+            <motorConstant>0.01</motorConstant>
             <momentConstant>0.016</momentConstant>
             <commandSubTopic>command/motor_speed</commandSubTopic>
             <motorNumber>0</motorNumber>
