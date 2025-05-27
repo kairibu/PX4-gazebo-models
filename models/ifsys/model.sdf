@@ -193,7 +193,65 @@
         </pressure>
         </air_pressure>
       </sensor>
+
+      <!-- leave for debugging lift-drag CoP -->
+      <!--
+      <visual name="cp_left_wing_visual">
+        <pose>-0.7 -1 0.3 0 0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.015</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>1 0 0 1</ambient>
+          <diffuse>1 0 0 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+      <visual name="cp_right_wing_visual">
+        <pose>-0.7 1 0.3 0 0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.015</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>1 0 0 1</ambient>
+          <diffuse>1 0 0 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+      <visual name="cp_left_atail_visual">
+        <pose>-1.9 -0.3 0.5 0 0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.015</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>1 0 0 1</ambient>
+          <diffuse>1 0 0 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+      <visual name="cp_right_atail_visual">
+        <pose>-1.9 0.3 0.5 0 0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.015</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>1 0 0 1</ambient>
+          <diffuse>1 0 0 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>-->
+      <!-- leave for debugging lift-drag CoP -->
+
     </link>
+
     <link name='propeller'>
       <inertial>
         <mass>0.01</mass>
@@ -1180,10 +1238,10 @@
             <cla_stall>-3.85</cla_stall>
             <cda_stall>-0.9233984055</cda_stall>
             <cma_stall>0</cma_stall>
-            <cp>0.4 0.45 0.1</cp>
+            <cp>-0.7 -1 0.2</cp>
             <area>0.6</area>
             <air_density>1.2041</air_density>
-            <forward>-1 0 0</forward>
+            <forward>1 0 0</forward>
             <upward>0 0 1</upward>
             <link_name>base_link</link_name>
             <control_joint_name>left_aileron_joint</control_joint_name>
@@ -1199,10 +1257,10 @@
             <cla_stall>-3.85</cla_stall>
             <cda_stall>-0.9233984055</cda_stall>
             <cma_stall>0</cma_stall>
-            <cp>0.4 -0.45 0.1</cp>
+            <cp>-0.7 1 0.2</cp>
             <area>0.6</area>
             <air_density>1.2041</air_density>
-            <forward>-1 0 0</forward>
+            <forward>1 0 0</forward>
             <upward>0 0 1</upward>
             <link_name>base_link</link_name>
             <control_joint_name>right_aileron_joint</control_joint_name>
@@ -1218,10 +1276,10 @@
             <cla_stall>-3.85</cla_stall>
             <cda_stall>-0.9233984055</cda_stall>
             <cma_stall>0</cma_stall>
-            <cp>-0.5 0 0</cp>
+            <cp>-1.85 -0.3 0.3</cp>
             <area>0.1</area>
             <air_density>1.2041</air_density>
-            <forward>-1 0 0</forward>
+            <forward>1 0 0</forward>
             <upward>0 1 1</upward>
             <link_name>base_link</link_name>
             <control_joint_name>left_a-tail_joint</control_joint_name>
@@ -1237,10 +1295,10 @@
             <cla_stall>-3.85</cla_stall>
             <cda_stall>-0.9233984055</cda_stall>
             <cma_stall>0</cma_stall>
-            <cp>-0.5 0 0</cp>
+            <cp>-1.85 0.3 0.3</cp>
             <area>0.1</area>
             <air_density>1.2041</air_density>
-            <forward>-1 0 0</forward>
+            <forward>1 0 0</forward>
             <upward>0 1 1</upward>
             <link_name>base_link</link_name>
             <control_joint_name>right_a-tail_joint</control_joint_name>
